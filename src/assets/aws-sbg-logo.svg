@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0E131F" />
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="#FF9900" stroke-opacity="0.3" stroke-width="2" />
+  <!-- Cloud & Builder Cube / Geometric Path -->
+  <path d="M32 14L48 23.2V41.6L32 50.8L16 41.6V23.2L32 14Z" stroke="#FF9900" stroke-width="2.5" stroke-linejoin="round" fill="#141D2B"/>
+  <path d="M32 14V32.5M48 23.2L32 32.5M16 23.2L32 32.5" stroke="#FF9900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 32.5V50.8" stroke="#FF9900" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Smile arc accent -->
+  <path d="M22 40C26 44 38 44 42 40" stroke="#FF9900" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

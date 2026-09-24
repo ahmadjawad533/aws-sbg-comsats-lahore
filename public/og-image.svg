@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <rect width="1200" height="630" fill="#080B11"/>
+  <rect x="2" y="2" width="1196" height="626" rx="20" stroke="#FF9900" stroke-opacity="0.25" stroke-width="4"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="60%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FF9900" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FF9900" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="950" cy="250" r="350" fill="url(#glow)"/>
+
+  <!-- Logo Cube -->
+  <g transform="translate(100, 140)">
+    <rect width="100" height="100" rx="24" fill="#0E131F" stroke="#FF9900" stroke-width="2.5" stroke-opacity="0.6"/>
+    <path d="M50 25L76 40V70L50 85L24 70V40L50 25Z" stroke="#FF9900" stroke-width="3" stroke-linejoin="round" fill="#141D2B"/>
+    <path d="M50 25V55M76 40L50 55M24 40L50 55" stroke="#FF9900" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M50 55V85" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/>
+    <path d="M36 67C42 73 58 73 64 67" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title & Text -->
+  <text x="100" y="300" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="54" fill="#FFFFFF" letter-spacing="-1">
+    AWS Student Builder Group
+  </text>
+  <text x="100" y="360" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="38" fill="#FF9900">
+    COMSATS University Islamabad, Lahore Campus
+  </text>
+  
+  <text x="100" y="430" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="24" fill="#94A3B8">
+    Build. Learn. Innovate. With AWS.
+  </text>
+
+  <rect x="100" y="480" width="360" height="48" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="120" y="511" font-family="monospace" font-size="16" fill="#F8FAFC">
+    Cloud · Workshops · Hackathons · Careers
+  </text>
+</svg>
