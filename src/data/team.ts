@@ -15,6 +15,7 @@ export interface TeamMember {
   imageTitle: string;
   linkedinUrl?: string;
   githubUrl?: string;
+  linktreeUrl?: string;
   isLeadRole?: boolean;
   imageScale?: string;
   imagePosition?: string;
@@ -33,11 +34,12 @@ export const teamMembers: TeamMember[] = [
     bio: 'Chapter Lead driving cloud innovation, community initiatives, and hands-on builder programs at COMSATS Lahore.',
     photoUrl: '/team/ahmad-jawad-bandesha.jpeg',
     imageTitle: 'Ahmad Jawad Bandesha - Chapter Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-    githubUrl: 'https://github.com/aws-sbg-comsats-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533/',
+    githubUrl: 'https://github.com/ahmadjawad533',
+    linktreeUrl: 'https://linktr.ee/ahmadjawad.533',
     isLeadRole: true,
-    imageScale: 'scale-[1.5] translate-y-3',
-    imagePosition: 'object-[50%_22%] origin-[50%_25%]',
+    imageScale: 'scale-100',
+    imagePosition: 'object-[50%_15%]',
   },
   {
     id: 'areej-fatima',

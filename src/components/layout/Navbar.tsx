@@ -51,35 +51,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
               className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9900] rounded-lg p-1"
               aria-label="AWS Student Builder Group COMSATS Lahore Home"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0E131F] border border-white/15 flex items-center justify-center group-hover:border-[#FF9900]/50 transition-colors shadow-inner">
-                {/* Custom SVG AWS Cube */}
-                <svg
-                  viewBox="0 0 32 32"
-                  className="w-6 h-6 text-[#FF9900] transition-transform duration-300 group-hover:scale-110"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 4L27 10.3V21.7L16 28L5 21.7V10.3L16 4Z" />
-                  <path d="M16 4V16M27 10.3L16 16M5 10.3L16 16" />
-                  <path d="M16 16V28" />
-                  <path d="M11 22C13 24 19 24 21 22" stroke="#FF9900" strokeWidth="2.2" />
-                </svg>
-              </div>
-
-              <div className="flex flex-col">
-                <span className="text-sm font-bold text-white tracking-tight group-hover:text-[#FF9900] transition-colors flex items-center gap-1.5">
-                  AWS SBG
-                  <span className="text-[11px] font-normal px-1.5 py-0.2 rounded bg-white/[0.06] text-slate-300 border border-white/10">
-                    COMSATS
-                  </span>
-                </span>
-                <span className="text-[10px] text-slate-400 font-mono tracking-wider">
-                  Lahore Chapter
-                </span>
-              </div>
+              <img
+                src="/logo-horizontal.png"
+                alt="AWS Student Builder Group COMSATS Lahore"
+                className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </NavLink>
 
             {/* Desktop Navigation Links */}

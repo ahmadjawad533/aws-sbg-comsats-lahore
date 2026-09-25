@@ -54,6 +54,8 @@ export interface CommunityEvent {
   agenda: AgendaItem[];
   gallery: EventGalleryImage[];
   resources: EventResource[];
+  collaborators?: string[];
+  communityPartnersCount?: number;
 }
 
 export const EVENT_CATEGORIES: EventCategory[] = [
@@ -65,6 +67,35 @@ export const EVENT_CATEGORIES: EventCategory[] = [
   'Career Session',
 ];
 
+// Standard Chapter Team Speakers
+const ahmadJawadSpeaker: EventSpeaker = {
+  name: 'Ahmad Jawad Bandesha',
+  role: 'Chapter Lead',
+  affiliation: 'AWS SBG COMSATS Lahore',
+  bio: 'Chapter Lead driving cloud innovation, community initiatives, and hands-on builder programs at COMSATS Lahore.',
+  avatarUrl: '/team/ahmad-jawad-bandesha.jpeg',
+  linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533/',
+  githubUrl: 'https://github.com/ahmadjawad533',
+};
+
+const ghanwaKashifSpeaker: EventSpeaker = {
+  name: 'Ghanwa Kashif',
+  role: 'Deputy Co-Lead',
+  affiliation: 'AWS SBG COMSATS Lahore',
+  bio: 'Deputy Co-Lead coordinating chapter operations, event management, and builder community workflows.',
+  avatarUrl: '/team/ghanwa-kashif.jpeg',
+  linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+};
+
+const hajraMominSpeaker: EventSpeaker = {
+  name: 'Hajra Momin',
+  role: 'Creative Media Lead',
+  affiliation: 'AWS SBG COMSATS Lahore',
+  bio: 'Creative Media Lead directing visual storytelling, digital campaign designs, and creative branding.',
+  avatarUrl: '/team/hajra-momin.jpeg',
+  linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+};
+
 /**
  * Chapter Events
  * All sessions listed here are completed chapter events.
@@ -75,64 +106,57 @@ export const eventsData: CommunityEvent[] = [
     slug: 'build-with-kiro-2026',
     title: 'Build with Kiro 2026',
     category: 'Hackathon',
-    date: '2026-09-18',
-    time: '10:00 AM - 05:00 PM PKT',
-    venue: 'Main Auditorium & Computer Labs, COMSATS Lahore',
+    date: 'Aug 10 – Sep 19, 2026',
+    time: '10:00 AM - 01:30 PM PKT (Grand Finale)',
+    venue: 'Lahore Garrison University (Grand Finale) & Online Hackathon',
     shortDescription:
-      'Flagship build sprint and hackathon challenging students to design, prototype, and ship cloud-connected applications utilizing Kiro AI IDE and specification-driven development.',
+      'Month-long flagship innovation sprint and hackathon with 43 community partners. Featured 4 structured phases culminating in a grand finale at Lahore Garrison University.',
     fullDescription: [
-      'Build with Kiro 2026 was the flagship student innovation sprint hosted by AWS Student Builder Group at COMSATS Lahore. Student teams tackled real-world campus and cloud problem statements using modern agentic development environments.',
-      'Participants leveraged Kiro IDE to draft specifications, architect data models, generate full-stack prototypes, and deploy resilient cloud services.',
-      'The day concluded with live demos, technical critique from chapter leads and mentors, and recognition of the highest-performing project teams.',
+      'Build with Kiro 2026 was the flagship student hackathon and innovation sprint organized by AWS Student Builder Group COMSATS Lahore, uniting 43 community partners nationwide.',
+      'Phase 1 — Building Phase (August 10 – September 10): Teams brainstormed architectures, crafted system specifications, and built cloud-integrated applications powered by Kiro IDE and AWS.',
+      'Phase 2 — Submission Phase (September 11 – September 12): Student builder teams submitted code repositories, architecture diagrams, and product walkthrough demos.',
+      'Phase 3 — Judgement Phase (September 13 – September 18): Rigorous review and scoring across technical depth, innovation, AWS cloud integration, and spec execution.',
+      'Phase 4 — Grand Finale (September 19, 10:00 AM – 1:30 PM): Hosted in-person at Lahore Garrison University, featuring keynote presentations, 1-hour builder networking, and award celebrations with food & refreshments.',
+      'Collaborators: Notion, NIC Lahore, Cheezious, and Kiro.',
     ],
     bannerImage:
       'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
     isUpcoming: false,
     isFeatured: true,
     registrationOpen: false,
-    speakers: [
-      {
-        name: 'Ahmad Jawad Bandesha',
-        role: 'Chapter Lead',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Spearheaded event architecture, hackathon prompt formulation, and technical evaluation.',
-        avatarUrl: '/team/ahmad-jawad-bandesha.jpeg',
-        linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-      },
-      {
-        name: 'Rana Asad ur Rehman',
-        role: 'Technical Lead',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Provided architecture reviews, debugging assistance, and cloud deployment mentorship.',
-        avatarUrl: '/team/rana-asad-ur-rehman.jpeg',
-        linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-      },
-    ],
+    collaborators: ['Kiro', 'Notion', 'NIC Lahore', 'Cheezious'],
+    communityPartnersCount: 43,
+    speakers: [ahmadJawadSpeaker, ghanwaKashifSpeaker, hajraMominSpeaker],
     agenda: [
       {
-        time: '10:00 AM - 10:45 AM',
-        title: 'Opening Ceremony & Track Briefing',
-        description: 'Introduction to Build with Kiro sprint guidelines, evaluation rubrics, and workspace setups.',
+        time: 'Aug 10 – Sep 10',
+        title: 'Building Phase',
+        description: 'Teams brainstorm, formulate specs, and build cloud-native applications with Kiro IDE.',
       },
       {
-        time: '10:45 AM - 01:30 PM',
-        title: 'Sprint 1: Specification Formulation & Rapid Prototyping',
-        description: 'Structuring project requirements, generating architecture schemas, and initial building.',
+        time: 'Sep 11 – Sep 12',
+        title: 'Submission Phase',
+        description: 'Submission of project code repositories, live deployment links, and video walkthroughs.',
       },
       {
-        time: '01:30 PM - 02:30 PM',
-        title: 'Networking Lunch & Mentor Checkpoints',
-        description: 'Midway architecture check-in with technical leads and senior mentors.',
+        time: 'Sep 13 – Sep 18',
+        title: 'Judgement Phase',
+        description: 'Evaluation by technical leads and industry mentors across architecture, innovation, and code quality.',
       },
       {
-        time: '02:30 PM - 04:15 PM',
-        title: 'Sprint 2: Integration, Polish & Deployment',
-        description: 'Finalizing live URLs, documentation, and preparing 3-minute project pitches.',
+        time: '10:00 AM - 11:30 AM (Sep 19)',
+        title: 'Grand Finale: Keynotes & Finalist Presentations',
+        description: 'Held at Lahore Garrison University. Finalist project showcases, technical critiques, and chapter reflections.',
       },
       {
-        time: '04:15 PM - 05:00 PM',
-        title: 'Project Pitches & Award Showcase',
-        description: 'Live student presentations, project scoring, and certificates ceremony.',
+        time: '11:30 AM - 12:30 PM (Sep 19)',
+        title: 'Builder Networking Session',
+        description: '1 full hour of dedicated student-to-mentor networking, talent connections, and partner interactions.',
+      },
+      {
+        time: '12:30 PM - 01:30 PM (Sep 19)',
+        title: 'Food, Refreshment & Award Ceremony',
+        description: 'Delicious refreshments courtesy of our food collaborators, trophy distribution, and closing remarks.',
       },
     ],
     gallery: [
@@ -151,7 +175,7 @@ export const eventsData: CommunityEvent[] = [
     ],
     resources: [
       {
-        title: 'Build with Kiro Hackathon Guide & Prompts',
+        title: 'Build with Kiro Hackathon Guide & Rubrics',
         type: 'slides',
         url: 'https://linktr.ee/awssbgcomsatslahore',
       },
@@ -167,7 +191,7 @@ export const eventsData: CommunityEvent[] = [
     slug: 'spec-driven-development-with-kiro',
     title: 'Spec Driven Development with Kiro',
     category: 'Workshop',
-    date: '2026-08-30',
+    date: '2026-08-23',
     time: '02:30 PM - 04:30 PM PKT',
     venue: 'Computer Lab 3, Department of Computer Science',
     shortDescription:
@@ -181,16 +205,7 @@ export const eventsData: CommunityEvent[] = [
     isUpcoming: false,
     isFeatured: true,
     registrationOpen: false,
-    speakers: [
-      {
-        name: 'Dawood Ahmad',
-        role: 'Technical Co-Lead',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Coordinated workshop live coding, terminal walkthroughs, and student setup troubleshooting.',
-        avatarUrl: '/team/dawood-ahmad.jpeg',
-        linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-      },
-    ],
+    speakers: [ahmadJawadSpeaker, ghanwaKashifSpeaker, hajraMominSpeaker],
     agenda: [
       {
         time: '02:30 PM - 03:00 PM',
@@ -222,7 +237,7 @@ export const eventsData: CommunityEvent[] = [
     slug: 'getting-started-with-kiro',
     title: 'Getting Started with Kiro',
     category: 'Workshop',
-    date: '2026-08-15',
+    date: '2026-08-16',
     time: '03:00 PM - 04:30 PM PKT',
     venue: 'Seminar Hall B, COMSATS Lahore',
     shortDescription:
@@ -236,16 +251,7 @@ export const eventsData: CommunityEvent[] = [
     isUpcoming: false,
     isFeatured: true,
     registrationOpen: false,
-    speakers: [
-      {
-        name: 'Rana Asad ur Rehman',
-        role: 'Technical Lead',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Demonstrated environment setups, extension configurations, and terminal productivity hacks.',
-        avatarUrl: '/team/rana-asad-ur-rehman.jpeg',
-        linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-      },
-    ],
+    speakers: [ahmadJawadSpeaker, hajraMominSpeaker],
     agenda: [
       {
         time: '03:00 PM - 03:30 PM',
@@ -273,17 +279,18 @@ export const eventsData: CommunityEvent[] = [
     ],
   },
   {
-    id: 'cloud-quest-level-3',
-    slug: 'cloud-quest-level-3',
-    title: 'Cloud Quest Level 3',
+    id: 'cloud-quest-level-2-game-night',
+    slug: 'cloud-quest-level-2-game-night',
+    title: 'Cloud Quest Level 2 Game Night',
     category: 'Community Session',
-    date: '2026-06-10',
+    date: '2026-06-06',
     time: '02:00 PM - 04:00 PM PKT',
     venue: 'Computer Lab 4, COMSATS Lahore',
     shortDescription:
       'Gamified cloud challenges and competitive architectural quest where students solved real infrastructure scenarios on AWS.',
     fullDescription: [
-      'Cloud Quest Level 3 engaged student builders in solving hands-on architectural scenarios. Tasks included debugging broken S3 bucket policies, resolving VPC subnet routing conflicts, and configuring load balancers.',
+      'Cloud Quest Level 2 Game Night engaged student builders in solving hands-on architectural scenarios in an exciting gamified format.',
+      'Tasks included debugging broken S3 bucket policies, resolving VPC subnet routing conflicts, and configuring load balancers.',
       'Students competed on speed, architectural adherence, and security practices.',
     ],
     bannerImage:
@@ -291,24 +298,16 @@ export const eventsData: CommunityEvent[] = [
     isUpcoming: false,
     isFeatured: false,
     registrationOpen: false,
-    speakers: [
-      {
-        name: 'Technical Team Panel',
-        role: 'Quest Facilitators',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Organized quest scenarios and guided students through console verification checkpoints.',
-        avatarUrl: '/team/dawood-ahmad.jpeg',
-      },
-    ],
+    speakers: [ahmadJawadSpeaker],
     agenda: [
       {
         time: '02:00 PM - 02:20 PM',
-        title: 'Quest Rules & Challenge Briefing',
+        title: 'Game Night Rules & Challenge Briefing',
         description: 'Scoring criteria, sandbox access verification, and safety constraints.',
       },
       {
         time: '02:20 PM - 03:40 PM',
-        title: 'Level 3 Challenge Sprint',
+        title: 'Level 2 Game Night Challenge Sprint',
         description: 'Hands-on console troubleshooting and network architecture fixes.',
       },
       {
@@ -331,42 +330,25 @@ export const eventsData: CommunityEvent[] = [
     slug: 'intro-to-aws-sbg',
     title: 'Intro to AWS SBG',
     category: 'Meetup',
-    date: '2026-04-20',
+    date: '2026-05-02',
     time: '03:00 PM - 04:45 PM PKT',
     venue: 'Main Auditorium, COMSATS Lahore',
     shortDescription:
       'Official community launch and orientation session introducing the mission, upcoming workshop roadmap, and leadership team of AWS SBG COMSATS Lahore.',
     fullDescription: [
       'The inaugural orientation event uniting students interested in cloud computing across COMSATS Lahore Campus.',
-      'Chapter leads presented the semester roadmap, introduced the core domains (Technical, Creative, Operations, Partnerships), and shared guidance on how to get started with AWS Free Tier and student credits.',
+      'Chapter lead presented the semester roadmap, introduced the core domains (Technical, Creative, Operations, Partnerships), and shared guidance on how to get started with AWS Free Tier and student credits.',
     ],
     bannerImage:
       'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
     isUpcoming: false,
     isFeatured: false,
     registrationOpen: false,
-    speakers: [
-      {
-        name: 'Ahmad Jawad Bandesha',
-        role: 'Chapter Lead',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Introduced chapter charter, university partnership, and vision for cloud builders.',
-        avatarUrl: '/team/ahmad-jawad-bandesha.jpeg',
-        linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-      },
-      {
-        name: 'Areej Fatima',
-        role: 'Deputy Lead',
-        affiliation: 'AWS SBG COMSATS Lahore',
-        bio: 'Outlined member onboarding channels, volunteer opportunities, and event calendar.',
-        avatarUrl: '/team/areej-fatima.jpeg',
-        linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-      },
-    ],
+    speakers: [ahmadJawadSpeaker],
     agenda: [
       {
         time: '03:00 PM - 03:30 PM',
-        title: 'Welcome & Welcome from Campus Leads',
+        title: 'Welcome & Welcome from Campus Lead',
         description: 'Why AWS SBG exists and the importance of cloud skills in Pakistan.',
       },
       {

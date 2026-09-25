@@ -11,31 +11,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
           {/* Brand & Mission column */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0E131F] border border-white/15 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 32 32"
-                  className="w-6 h-6 text-[#FF9900]"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 4L27 10.3V21.7L16 28L5 21.7V10.3L16 4Z" />
-                  <path d="M16 4V16M27 10.3L16 16M5 10.3L16 16" />
-                  <path d="M16 16V28" />
-                  <path d="M11 22C13 24 19 24 21 22" stroke="#FF9900" strokeWidth="2.2" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-base font-bold text-white tracking-tight">
-                  AWS Student Builder Group
-                </span>
-                <span className="text-xs text-[#FF9900] font-mono">
-                  COMSATS Lahore Chapter
-                </span>
-              </div>
+            <Link to="/" className="flex items-center gap-3 group" aria-label="AWS Student Builder Group COMSATS Lahore">
+              <img
+                src="/logo-horizontal.png"
+                alt="AWS Student Builder Group COMSATS Lahore"
+                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">

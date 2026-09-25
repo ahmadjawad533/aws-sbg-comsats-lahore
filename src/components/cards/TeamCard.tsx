@@ -4,7 +4,7 @@ import { TeamMember } from '@/data/team';
 import { Badge } from '@/components/common/Badge';
 import { generateInitials } from '@/utils/formatting';
 import { cn } from '@/utils/cn';
-import { LinkedinIcon, GithubIcon } from '@/components/common/BrandIcons';
+import { LinkedinIcon, GithubIcon, LinktreeIcon } from '@/components/common/BrandIcons';
 
 export interface TeamCardProps {
   member: TeamMember;
@@ -100,6 +100,18 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
                 title={`${member.name} on GitHub`}
               >
                 <GithubIcon size={16} />
+              </a>
+            )}
+            {member.linktreeUrl && (
+              <a
+                href={member.linktreeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#43E660] hover:bg-[#43E660]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+                aria-label={`${member.name} on Linktree`}
+                title={`${member.name} on Linktree`}
+              >
+                <LinktreeIcon size={16} />
               </a>
             )}
           </div>

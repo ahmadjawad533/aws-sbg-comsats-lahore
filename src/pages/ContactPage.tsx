@@ -115,7 +115,7 @@ export const ContactPage: React.FC = () => {
     },
     {
       q: 'How can our company or society collaborate on a workshop or hackathon?',
-      a: 'You can submit a proposal through the contact form selecting "Partnership & Sponsorship" or reach out directly to our outreach team via email at contact@aws-sbg-comsats.org.',
+      a: `You can submit a proposal through the contact form selecting "Partnership & Sponsorship" or reach out directly to our outreach team via email at ${siteConfig.contactEmail}.`,
     },
   ];
 

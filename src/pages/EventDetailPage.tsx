@@ -7,7 +7,6 @@ import { Button } from '@/components/common/Button';
 import { Lightbox } from '@/components/common/Lightbox';
 import { EventCard } from '@/components/cards/EventCard';
 import { LinkedinIcon, GithubIcon } from '@/components/common/BrandIcons';
-import { cn } from '@/utils/cn';
 import {
   Calendar,
   Clock,
@@ -178,6 +177,44 @@ export const EventDetailPage: React.FC = () => {
             </div>
           </section>
 
+          {/* Collaborators & Partners Highlight */}
+          {(event.collaborators || event.communityPartnersCount) && (
+            <section className="p-6 rounded-2xl bg-gradient-to-r from-[#FF9900]/10 via-[#0E131F] to-[#0E131F] border border-[#FF9900]/30 space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <span className="text-xs font-mono text-[#FF9900] uppercase tracking-wider block mb-1">
+                    Ecosystem Impact
+                  </span>
+                  <h3 className="text-lg font-bold text-white">
+                    Event Collaborators & Community Partners
+                  </h3>
+                </div>
+                {event.communityPartnersCount && (
+                  <div className="px-4 py-2 rounded-xl bg-[#FF9900]/15 border border-[#FF9900]/30 text-[#FF9900] font-mono text-sm font-bold flex items-center gap-2">
+                    <span>🤝</span>
+                    <span>{event.communityPartnersCount} Community Partners</span>
+                  </div>
+                )}
+              </div>
+
+              {event.collaborators && event.collaborators.length > 0 && (
+                <div className="pt-2">
+                  <span className="text-xs text-slate-400 font-mono block mb-2">OFFICIAL COLLABORATORS:</span>
+                  <div className="flex flex-wrap gap-2">
+                    {event.collaborators.map((collab, i) => (
+                      <span
+                        key={i}
+                        className="px-3.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-white font-medium text-xs sm:text-sm hover:border-[#FF9900]/50 transition-colors"
+                      >
+                        {collab}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+          )}
+
           {/* Agenda / Schedule */}
           {event.agenda && event.agenda.length > 0 && (
             <section className="space-y-4">
@@ -220,12 +257,7 @@ export const EventDetailPage: React.FC = () => {
                         <img
                           src={speaker.avatarUrl}
                           alt={speaker.name}
-                          className={cn(
-                            'w-full h-full object-cover',
-                            speaker.name.includes('Ahmad Jawad')
-                              ? 'scale-[1.5] translate-y-1 origin-[50%_25%]'
-                              : 'object-[50%_18%]'
-                          )}
+                          className="w-full h-full object-cover object-[50%_20%]"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-slate-400">
