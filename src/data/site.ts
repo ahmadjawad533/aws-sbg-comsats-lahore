@@ -55,8 +55,8 @@ export const siteConfig: SiteConfig = {
   stats: {
     members: '1281+',
     events: '7+',
-    reviews: '89+',
-    rating: '4.7+',
+    reviews: '91+',
+    rating: '4.75+',
     workshops: '3',
     projects: '45+',
   },
