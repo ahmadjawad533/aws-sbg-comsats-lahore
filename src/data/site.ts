@@ -53,12 +53,12 @@ export const siteConfig: SiteConfig = {
   disclaimer:
     'AWS Student Builder Group COMSATS Lahore is a student community and is not an AWS corporate organization.',
   stats: {
-    members: '1281+',
+    members: '1321+',
     events: '7+',
     reviews: '91+',
     rating: '4.75+',
     workshops: '3',
-    projects: '45+',
+    projects: '47+',
   },
   socials: {
     linkedin: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
