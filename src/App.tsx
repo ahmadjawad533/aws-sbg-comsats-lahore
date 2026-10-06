@@ -10,6 +10,7 @@ import { ResourcesPage } from '@/pages/ResourcesPage';
 import { PartnersPage } from '@/pages/PartnersPage';
 import { ContactPage } from '@/pages/ContactPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
+import { Analytics } from '@vercel/analytics/react';
 
 export function App() {
   return (
@@ -28,6 +29,7 @@ export function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
