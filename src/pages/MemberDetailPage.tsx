@@ -6,7 +6,7 @@ import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
 import { EventCard } from '@/components/cards/EventCard';
-import { LinkedinIcon, GithubIcon, LinktreeIcon } from '@/components/common/BrandIcons';
+import { LinkedinIcon, GithubIcon, LinktreeIcon, InstagramIcon } from '@/components/common/BrandIcons';
 import { generateInitials } from '@/utils/formatting';
 import { cn } from '@/utils/cn';
 import {
@@ -180,6 +180,18 @@ export const MemberDetailPage: React.FC = () => {
                 >
                   <LinkedinIcon size={16} />
                   <span>LinkedIn Profile</span>
+                </a>
+              )}
+
+              {member.instagramUrl && (
+                <a
+                  href={member.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.05] hover:bg-[#E4405F]/20 border border-white/10 hover:border-[#E4405F]/50 text-xs sm:text-sm font-medium text-slate-200 hover:text-[#E4405F] transition-colors"
+                >
+                  <InstagramIcon size={16} />
+                  <span>Instagram</span>
                 </a>
               )}
 
@@ -387,6 +399,19 @@ export const MemberDetailPage: React.FC = () => {
                   leftIcon={<LinkedinIcon size={15} />}
                 >
                   Connect on LinkedIn
+                </Button>
+              )}
+
+              {member.instagramUrl && (
+                <Button
+                  href={member.instagramUrl}
+                  isExternal
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-center text-[#E4405F] border-[#E4405F]/30 hover:bg-[#E4405F]/10"
+                  leftIcon={<InstagramIcon size={15} />}
+                >
+                  Follow on Instagram
                 </Button>
               )}
 

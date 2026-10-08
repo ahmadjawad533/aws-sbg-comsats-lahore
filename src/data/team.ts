@@ -20,6 +20,7 @@ export interface TeamMember {
   photoUrl: string;
   imageTitle: string;
   linkedinUrl?: string;
+  instagramUrl?: string;
   githubUrl?: string;
   linktreeUrl?: string;
   portfolioUrl?: string;
@@ -70,7 +71,8 @@ export const teamMembers: TeamMember[] = [
     email: 'awscloudclubcomsatslahore@gmail.com',
     photoUrl: '/team/ahmad-jawad-bandesha.jpeg',
     imageTitle: 'Ahmad Jawad Bandesha - Chapter Lead',
-    linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533/',
+    linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533',
+    instagramUrl: 'https://www.instagram.com/ahmadjawad.533',
     githubUrl: 'https://github.com/ahmadjawad533',
     linktreeUrl: 'https://linktr.ee/ahmadjawad.533',
     portfolioUrl: 'https://iahmadjawad533.wixsite.com/my-site',
@@ -107,8 +109,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Building cohesive community structures where student talent can thrive and lead.',
     photoUrl: '/team/areej-fatima.jpeg',
     imageTitle: 'Areej Fatima - Deputy Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-    githubUrl: 'https://github.com/aws-sbg-comsats-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/areej-fatima-4a0881350?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/areejfatimaaa__?stkn=NGs3NXA4bTh5MmZk',
     isLeadRole: true,
   },
   {
@@ -140,8 +142,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Making cloud computing accessible, interactive, and welcoming for every learner.',
     photoUrl: '/team/ghanwa-kashif.jpeg',
     imageTitle: 'Ghanwa Kashif - Deputy Co-Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-    githubUrl: 'https://github.com/aws-sbg-comsats-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/ghanwa-k-135991287?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/ghan3a?stkn=MXNtam4waG44dGl1cA==',
     isLeadRole: false,
   },
 
@@ -175,8 +177,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Architecture is not just diagrams on a whiteboard — it is resilient systems running in the cloud.',
     photoUrl: '/team/rana-asad-ur-rehman.jpeg',
     imageTitle: 'Rana Asad ur Rehman - Technical Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-    githubUrl: 'https://github.com/aws-sbg-comsats-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/rana-asad-ur-rahman-0a2457339?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/ranaasad4622?stkn=MTd6NnNkd2R6d2RoZw==',
     isLeadRole: true,
   },
   {
@@ -208,8 +210,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'The fastest way to learn the cloud is to break things, fix them, and build again.',
     photoUrl: '/team/dawood-ahmad.jpeg',
     imageTitle: 'Dawood Ahmad - Technical C0-Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
-    githubUrl: 'https://github.com/aws-sbg-comsats-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/dawoodahmedjavid?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/d.ahmed.jv?stkn=bXJ3N2ZsanZrd2Zo',
     isLeadRole: false,
   },
 
@@ -243,7 +245,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Design gives technology its voice, turning complex ideas into compelling community stories.',
     photoUrl: '/team/hajra-momin.jpeg',
     imageTitle: 'Hajra Momin - Creative Media Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/hajra-momin-1779a8246?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/photogram.hm?stkn=ZWNmZGQxdzQyMmc=',
     isLeadRole: true,
   },
   {
@@ -275,7 +278,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Every pixel should reflect the energy, ambition, and passion of our builder community.',
     photoUrl: '/team/zarwa-ayaz.jpeg',
     imageTitle: 'Zarwa Ayaz - Creative Media Co-Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/zarwaayaz?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/zarrr_05_?stkn=MzFsM28yemNmbmhj',
     isLeadRole: false,
   },
 
@@ -309,7 +313,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Flawless execution behind the scenes is what makes unforgettable events possible.',
     photoUrl: '/team/abdul-raheem-wattoo.jpeg',
     imageTitle: 'Abdul Raheem Wattoo - Operational Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/abdul-raheem-wattoo?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/a.raheem_.w?stkn=MWdyNzQ0OHlwdDJhaA==',
     isLeadRole: true,
   },
   {
@@ -341,7 +346,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Creating a seamless, welcoming event experience for every student who walks through our doors.',
     photoUrl: '/team/tehreem-abdul-sattar.jpeg',
     imageTitle: 'Tehreem Abdul Sattar - Operational Co-Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/tehreem-abdul-sattar-0341b4327?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/urfav_reems?stkn=NG1rYmh6b3lra2dv',
     isLeadRole: false,
   },
 
@@ -375,7 +381,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Collaboration multiplies impact — when communities unite, builders build the future.',
     photoUrl: '/team/sundas-abid.jpeg',
     imageTitle: 'Sundas Abid - Partnership and Outreach Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/sundasabid?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/sundasabid.26?stkn=MXFkN3Q0dTM3eW92Mw==',
     isLeadRole: true,
   },
   {
@@ -407,7 +414,8 @@ export const teamMembers: TeamMember[] = [
     quote: 'Connecting passionate minds to build opportunities that outlast any single event.',
     photoUrl: '/team/hafsa-qureshi.jpeg',
     imageTitle: 'Hafsa Qureshi - Partnership & Outreach Co-Lead',
-    linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+    linkedinUrl: 'https://www.linkedin.com/in/hafsaqureshi-visionlane?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramUrl: 'https://www.instagram.com/_hafsaqureshii__?stkn=MTBsNnZxdDlqbHc5Ng==',
     isLeadRole: false,
   },
 ];
