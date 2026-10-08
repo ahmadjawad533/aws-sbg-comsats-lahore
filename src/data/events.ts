@@ -195,11 +195,11 @@ export const eventsData: CommunityEvent[] = [
     category: 'Workshop',
     date: '2026-08-23',
     time: '02:30 PM - 04:30 PM PKT',
-    venue: 'Computer Lab 3, Department of Computer Science',
+    venue: 'Virtual (Online)',
     shortDescription:
       'Hands-on technical workshop covering how to write precise technical specifications and steer agentic workflows in Kiro to deliver maintainable software.',
     fullDescription: [
-      'Writing code without well-defined specifications leads to rework and architectural debt. In this workshop, students learned the principles of Specification-Driven Development (SDD).',
+      'Writing code without well-defined specifications leads to rework and architectural debt. In this virtual workshop, students learned the principles of Specification-Driven Development (SDD).',
       'The session walked through translating ambiguous problem descriptions into clear markdown requirements, functional schemas, and automated testable milestones.',
     ],
     bannerImage:
@@ -241,11 +241,11 @@ export const eventsData: CommunityEvent[] = [
     category: 'Workshop',
     date: '2026-08-16',
     time: '03:00 PM - 04:30 PM PKT',
-    venue: 'Seminar Hall B, COMSATS Lahore',
+    venue: 'Virtual (Online)',
     shortDescription:
-      'Interactive orientation on installing, configuring, and accelerating daily developer workflows using the Kiro IDE and terminal tooling.',
+      'Interactive virtual orientation on installing, configuring, and accelerating daily developer workflows using the Kiro IDE and terminal tooling.',
     fullDescription: [
-      'A practical onboarding session introducing students to Kiro IDE. We covered installation, Linux/Mac/Windows terminal configurations, custom keybindings, and integrating version control.',
+      'A practical virtual onboarding session introducing students to Kiro IDE. We covered installation, Linux/Mac/Windows terminal configurations, custom keybindings, and integrating version control.',
       'Students experienced live demonstrations of how Kiro reduces boilerplate and assists in navigating unfamiliar codebases.',
     ],
     bannerImage:
@@ -287,11 +287,11 @@ export const eventsData: CommunityEvent[] = [
     category: 'Community Session',
     date: '2026-06-06',
     time: '02:00 PM - 04:00 PM PKT',
-    venue: 'Computer Lab 4, COMSATS Lahore',
+    venue: 'CEGA, NASTP',
     shortDescription:
-      'Gamified cloud challenges and competitive architectural quest where students solved real infrastructure scenarios on AWS.',
+      'Gamified cloud challenges and competitive architectural quest held at CEGA, NASTP where students solved real infrastructure scenarios on AWS.',
     fullDescription: [
-      'Cloud Quest Level 2 Game Night engaged student builders in solving hands-on architectural scenarios in an exciting gamified format.',
+      'Cloud Quest Level 2 Game Night engaged student builders in solving hands-on architectural scenarios at CEGA, NASTP in an exciting gamified format.',
       'Tasks included debugging broken S3 bucket policies, resolving VPC subnet routing conflicts, and configuring load balancers.',
       'Students competed on speed, architectural adherence, and security practices.',
     ],
@@ -334,11 +334,11 @@ export const eventsData: CommunityEvent[] = [
     category: 'Meetup',
     date: '2026-05-02',
     time: '03:00 PM - 04:45 PM PKT',
-    venue: 'Main Auditorium, COMSATS Lahore',
+    venue: 'Virtual (Online)',
     shortDescription:
-      'Official community launch and orientation session introducing the mission, upcoming workshop roadmap, and leadership team of AWS SBG COMSATS Lahore.',
+      'Official virtual community launch and orientation session introducing the mission, upcoming workshop roadmap, and leadership team of AWS SBG COMSATS Lahore.',
     fullDescription: [
-      'The inaugural orientation event uniting students interested in cloud computing across COMSATS Lahore Campus.',
+      'The inaugural virtual orientation session uniting students interested in cloud computing across COMSATS Lahore Campus.',
       'Chapter lead presented the semester roadmap, introduced the core domains (Technical, Creative, Operations, Partnerships), and shared guidance on how to get started with AWS Free Tier and student credits.',
     ],
     bannerImage:

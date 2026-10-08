@@ -5,7 +5,7 @@ import { TeamMember } from '@/data/team';
 import { Badge } from '@/components/common/Badge';
 import { generateInitials } from '@/utils/formatting';
 import { cn } from '@/utils/cn';
-import { LinkedinIcon, LinktreeIcon, InstagramIcon } from '@/components/common/BrandIcons';
+import { LinkedinIcon, InstagramIcon } from '@/components/common/BrandIcons';
 
 export interface TeamCardProps {
   member: TeamMember;
@@ -94,18 +94,18 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
           </Link>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-2">
             {member.linkedinUrl && (
               <a
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="p-1.5 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#0A66C2] hover:bg-[#0A66C2]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+                className="p-2 rounded-lg bg-white/[0.05] hover:bg-[#0A66C2]/15 text-slate-400 hover:text-[#0A66C2] border border-white/10 hover:border-[#0A66C2]/40 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
                 aria-label={`${member.name} on LinkedIn`}
                 title={`${member.name} on LinkedIn`}
               >
-                <LinkedinIcon size={15} />
+                <LinkedinIcon size={16} />
               </a>
             )}
             {member.instagramUrl && (
@@ -114,24 +114,11 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="p-1.5 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#E4405F] hover:bg-[#E4405F]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+                className="p-2 rounded-lg bg-white/[0.05] hover:bg-[#E4405F]/15 text-slate-400 hover:text-[#E4405F] border border-white/10 hover:border-[#E4405F]/40 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
                 aria-label={`${member.name} on Instagram`}
                 title={`${member.name} on Instagram`}
               >
-                <InstagramIcon size={15} />
-              </a>
-            )}
-            {member.linktreeUrl && (
-              <a
-                href={member.linktreeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="p-1.5 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#43E660] hover:bg-[#43E660]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
-                aria-label={`${member.name} on Linktree`}
-                title={`${member.name} on Linktree`}
-              >
-                <LinktreeIcon size={15} />
+                <InstagramIcon size={16} />
               </a>
             )}
           </div>
