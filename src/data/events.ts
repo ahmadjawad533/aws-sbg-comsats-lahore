@@ -13,7 +13,7 @@ export interface EventSpeaker {
   bio: string;
   avatarUrl?: string;
   linkedinUrl?: string;
-  githubUrl?: string;
+  instagramUrl?: string;
 }
 
 export interface AgendaItem {
@@ -74,8 +74,8 @@ const ahmadJawadSpeaker: EventSpeaker = {
   affiliation: 'AWS SBG COMSATS Lahore',
   bio: 'Chapter Lead driving cloud innovation, community initiatives, and hands-on builder programs at COMSATS Lahore.',
   avatarUrl: '/team/ahmad-jawad-bandesha.jpeg',
-  linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533/',
-  githubUrl: 'https://github.com/ahmadjawad533',
+  linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533',
+  instagramUrl: 'https://www.instagram.com/ahmadjawad.533',
 };
 
 const ghanwaKashifSpeaker: EventSpeaker = {
@@ -84,7 +84,8 @@ const ghanwaKashifSpeaker: EventSpeaker = {
   affiliation: 'AWS SBG COMSATS Lahore',
   bio: 'Deputy Co-Lead coordinating chapter operations, event management, and builder community workflows.',
   avatarUrl: '/team/ghanwa-kashif.jpeg',
-  linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+  linkedinUrl: 'https://www.linkedin.com/in/ghanwa-k-135991287?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+  instagramUrl: 'https://www.instagram.com/ghan3a?stkn=MXNtam4waG44dGl1cA==',
 };
 
 const hajraMominSpeaker: EventSpeaker = {
@@ -93,7 +94,8 @@ const hajraMominSpeaker: EventSpeaker = {
   affiliation: 'AWS SBG COMSATS Lahore',
   bio: 'Creative Media Lead directing visual storytelling, digital campaign designs, and creative branding.',
   avatarUrl: '/team/hajra-momin.jpeg',
-  linkedinUrl: 'https://www.linkedin.com/company/aws-cloud-club-cui-lahore',
+  linkedinUrl: 'https://www.linkedin.com/in/hajra-momin-1779a8246?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+  instagramUrl: 'https://www.instagram.com/photogram.hm?stkn=ZWNmZGQxdzQyMmc=',
 };
 
 /**

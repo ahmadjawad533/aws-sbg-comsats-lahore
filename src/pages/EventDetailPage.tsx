@@ -7,7 +7,7 @@ import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
 import { Lightbox } from '@/components/common/Lightbox';
 import { EventCard } from '@/components/cards/EventCard';
-import { LinkedinIcon, GithubIcon } from '@/components/common/BrandIcons';
+import { LinkedinIcon, GithubIcon, InstagramIcon } from '@/components/common/BrandIcons';
 import {
   Calendar,
   Clock,
@@ -318,15 +318,26 @@ export const EventDetailPage: React.FC = () => {
                               <ArrowRight className="w-3 h-3" />
                             </Link>
                           )}
-                          {speaker.linkedinUrl && (
+                          {(matchedMember?.linkedinUrl || speaker.linkedinUrl) && (
                             <a
-                              href={speaker.linkedinUrl}
+                              href={matchedMember?.linkedinUrl || speaker.linkedinUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1.5 text-[11px] text-[#0A66C2] hover:underline font-medium"
                             >
                               <LinkedinIcon size={12} />
                               <span>LinkedIn</span>
+                            </a>
+                          )}
+                          {(matchedMember?.instagramUrl || speaker.instagramUrl) && (
+                            <a
+                              href={matchedMember?.instagramUrl || speaker.instagramUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-[11px] text-[#E4405F] hover:underline font-medium"
+                            >
+                              <InstagramIcon size={12} />
+                              <span>Instagram</span>
                             </a>
                           )}
                         </div>
