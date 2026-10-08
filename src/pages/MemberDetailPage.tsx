@@ -6,7 +6,7 @@ import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
 import { EventCard } from '@/components/cards/EventCard';
-import { LinkedinIcon, GithubIcon, LinktreeIcon, InstagramIcon } from '@/components/common/BrandIcons';
+import { LinkedinIcon, LinktreeIcon, InstagramIcon } from '@/components/common/BrandIcons';
 import { generateInitials } from '@/utils/formatting';
 import { cn } from '@/utils/cn';
 import {
@@ -192,18 +192,6 @@ export const MemberDetailPage: React.FC = () => {
                 >
                   <InstagramIcon size={16} />
                   <span>Instagram</span>
-                </a>
-              )}
-
-              {member.githubUrl && (
-                <a
-                  href={member.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.05] hover:bg-white/10 border border-white/10 hover:border-white/30 text-xs sm:text-sm font-medium text-slate-200 hover:text-white transition-colors"
-                >
-                  <GithubIcon size={16} />
-                  <span>GitHub</span>
                 </a>
               )}
 

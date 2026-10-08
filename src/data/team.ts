@@ -21,7 +21,6 @@ export interface TeamMember {
   imageTitle: string;
   linkedinUrl?: string;
   instagramUrl?: string;
-  githubUrl?: string;
   linktreeUrl?: string;
   portfolioUrl?: string;
   isLeadRole?: boolean;
@@ -73,7 +72,6 @@ export const teamMembers: TeamMember[] = [
     imageTitle: 'Ahmad Jawad Bandesha - Chapter Lead',
     linkedinUrl: 'https://www.linkedin.com/in/ahmadjawad533',
     instagramUrl: 'https://www.instagram.com/ahmadjawad.533',
-    githubUrl: 'https://github.com/ahmadjawad533',
     linktreeUrl: 'https://linktr.ee/ahmadjawad.533',
     portfolioUrl: 'https://iahmadjawad533.wixsite.com/my-site',
     isLeadRole: true,
