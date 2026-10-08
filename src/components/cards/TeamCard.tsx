@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { User } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { User, ArrowRight } from 'lucide-react';
 import { TeamMember } from '@/data/team';
 import { Badge } from '@/components/common/Badge';
 import { generateInitials } from '@/utils/formatting';
@@ -24,8 +25,12 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
       )}
       title={member.imageTitle}
     >
-      {/* Photo Frame - Optimized to make face prominently visible */}
-      <div className="relative aspect-[4/4.2] w-full overflow-hidden bg-slate-900">
+      {/* Clickable Photo Frame */}
+      <Link
+        to={`/team/${member.id}`}
+        className="relative aspect-[4/4.2] w-full overflow-hidden bg-slate-900 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+        aria-label={`View profile of ${member.name}`}
+      >
         {!imageError ? (
           <img
             src={member.photoUrl}
@@ -59,35 +64,48 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
             {member.department}
           </Badge>
         </div>
-      </div>
+      </Link>
 
       {/* Card Details */}
       <div className="flex flex-col flex-1 p-5 sm:p-6">
-        <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#FF9900] transition-colors">
-          {member.name}
-        </h3>
+        <Link
+          to={`/team/${member.id}`}
+          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9900] rounded"
+        >
+          <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#FF9900] transition-colors">
+            {member.name}
+          </h3>
+        </Link>
         <p className="text-xs sm:text-sm text-[#FF9900] font-semibold mb-3">
           {member.position}
         </p>
 
-        <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6 flex-1">
+        <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6 flex-1 line-clamp-3">
           {member.bio}
         </p>
 
-        {/* Social Links */}
-        <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-          <span className="text-xs text-slate-500 font-mono">Connect</span>
-          <div className="flex items-center gap-2">
+        {/* Social Links & View Profile */}
+        <div className="pt-4 border-t border-white/5 flex items-center justify-between gap-2">
+          <Link
+            to={`/team/${member.id}`}
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-300 hover:text-[#FF9900] transition-colors group/link"
+          >
+            <span>View Profile</span>
+            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
+          </Link>
+
+          <div className="flex items-center gap-1.5">
             {member.linkedinUrl && (
               <a
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#0A66C2] hover:bg-[#0A66C2]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+                onClick={(e) => e.stopPropagation()}
+                className="p-1.5 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#0A66C2] hover:bg-[#0A66C2]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
                 aria-label={`${member.name} on LinkedIn`}
                 title={`${member.name} on LinkedIn`}
               >
-                <LinkedinIcon size={16} />
+                <LinkedinIcon size={15} />
               </a>
             )}
             {member.githubUrl && (
@@ -95,11 +113,12 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
                 href={member.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white/[0.04] text-slate-400 hover:text-white hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+                onClick={(e) => e.stopPropagation()}
+                className="p-1.5 rounded-lg bg-white/[0.04] text-slate-400 hover:text-white hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
                 aria-label={`${member.name} on GitHub`}
                 title={`${member.name} on GitHub`}
               >
-                <GithubIcon size={16} />
+                <GithubIcon size={15} />
               </a>
             )}
             {member.linktreeUrl && (
@@ -107,11 +126,12 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member, className }) => {
                 href={member.linktreeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#43E660] hover:bg-[#43E660]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
+                onClick={(e) => e.stopPropagation()}
+                className="p-1.5 rounded-lg bg-white/[0.04] text-slate-400 hover:text-[#43E660] hover:bg-[#43E660]/15 transition-colors focus-visible:ring-2 focus-visible:ring-[#FF9900]"
                 aria-label={`${member.name} on Linktree`}
                 title={`${member.name} on Linktree`}
               >
-                <LinktreeIcon size={16} />
+                <LinktreeIcon size={15} />
               </a>
             )}
           </div>

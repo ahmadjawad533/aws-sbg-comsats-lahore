@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { eventsData } from '@/data/events';
+import { teamMembers } from '@/data/team';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { Badge } from '@/components/common/Badge';
 import { Button } from '@/components/common/Button';
@@ -20,6 +21,7 @@ import {
   User,
   CheckCircle2,
   AlertCircle,
+  ArrowRight,
 } from 'lucide-react';
 
 export const EventDetailPage: React.FC = () => {
@@ -247,43 +249,91 @@ export const EventDetailPage: React.FC = () => {
             <section className="space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold text-white">Featured Speakers & Hosts</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {event.speakers.map((speaker, idx) => (
-                  <div
-                    key={idx}
-                    className="p-5 rounded-2xl bg-[#0E131F]/90 border border-white/10 flex items-start gap-4"
-                  >
-                    <div className="w-14 h-14 rounded-xl overflow-hidden bg-slate-800 border border-white/10 shrink-0">
-                      {speaker.avatarUrl ? (
-                        <img
-                          src={speaker.avatarUrl}
-                          alt={speaker.name}
-                          className="w-full h-full object-cover object-[50%_20%]"
-                        />
+                {event.speakers.map((speaker, idx) => {
+                  const matchedMember = teamMembers.find(
+                    (m) => m.name.toLowerCase() === speaker.name.toLowerCase()
+                  );
+
+                  return (
+                    <div
+                      key={idx}
+                      className="p-5 rounded-2xl bg-[#0E131F]/90 border border-white/10 flex items-start gap-4 hover:border-white/20 transition-colors"
+                    >
+                      {matchedMember ? (
+                        <Link
+                          to={`/team/${matchedMember.id}`}
+                          className="w-14 h-14 rounded-xl overflow-hidden bg-slate-800 border border-white/10 shrink-0 block hover:border-[#FF9900]/50 transition-colors group/avatar"
+                          title={`View ${matchedMember.name}'s Profile`}
+                        >
+                          {speaker.avatarUrl ? (
+                            <img
+                              src={speaker.avatarUrl}
+                              alt={speaker.name}
+                              className="w-full h-full object-cover object-[50%_20%] transition-transform duration-300 group-hover/avatar:scale-110"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-slate-400">
+                              <User className="w-6 h-6" />
+                            </div>
+                          )}
+                        </Link>
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-slate-400">
-                          <User className="w-6 h-6" />
+                        <div className="w-14 h-14 rounded-xl overflow-hidden bg-slate-800 border border-white/10 shrink-0">
+                          {speaker.avatarUrl ? (
+                            <img
+                              src={speaker.avatarUrl}
+                              alt={speaker.name}
+                              className="w-full h-full object-cover object-[50%_20%]"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-slate-400">
+                              <User className="w-6 h-6" />
+                            </div>
+                          )}
                         </div>
                       )}
+
+                      <div className="flex-1 min-w-0">
+                        {matchedMember ? (
+                          <Link
+                            to={`/team/${matchedMember.id}`}
+                            className="text-sm font-bold text-white hover:text-[#FF9900] transition-colors truncate block"
+                          >
+                            {speaker.name}
+                          </Link>
+                        ) : (
+                          <h4 className="text-sm font-bold text-white truncate">{speaker.name}</h4>
+                        )}
+                        <p className="text-xs text-[#FF9900] font-medium truncate">{speaker.role}</p>
+                        <p className="text-[11px] text-slate-400 mb-2 truncate">{speaker.affiliation}</p>
+                        <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{speaker.bio}</p>
+
+                        <div className="flex flex-wrap items-center gap-3 mt-2.5">
+                          {matchedMember && (
+                            <Link
+                              to={`/team/${matchedMember.id}`}
+                              className="inline-flex items-center gap-1 text-[11px] font-medium text-amber-400 hover:text-amber-300 transition-colors"
+                            >
+                              <span>View Profile</span>
+                              <ArrowRight className="w-3 h-3" />
+                            </Link>
+                          )}
+                          {speaker.linkedinUrl && (
+                            <a
+                              href={speaker.linkedinUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-[11px] text-[#0A66C2] hover:underline font-medium"
+                            >
+                              <LinkedinIcon size={12} />
+                              <span>LinkedIn</span>
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-bold text-white truncate">{speaker.name}</h4>
-                      <p className="text-xs text-[#FF9900] font-medium truncate">{speaker.role}</p>
-                      <p className="text-[11px] text-slate-400 mb-2 truncate">{speaker.affiliation}</p>
-                      <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{speaker.bio}</p>
-                      {speaker.linkedinUrl && (
-                        <a
-                          href={speaker.linkedinUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-[11px] text-[#0A66C2] hover:underline mt-2 font-medium"
-                        >
-                          <LinkedinIcon size={13} />
-                          <span>LinkedIn</span>
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </section>
           )}

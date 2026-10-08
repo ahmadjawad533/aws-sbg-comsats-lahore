@@ -5,6 +5,7 @@ import { AboutPage } from '@/pages/AboutPage';
 import { EventsPage } from '@/pages/EventsPage';
 import { EventDetailPage } from '@/pages/EventDetailPage';
 import { TeamPage } from '@/pages/TeamPage';
+import { MemberDetailPage } from '@/pages/MemberDetailPage';
 import { AchievementsPage } from '@/pages/AchievementsPage';
 import { ResourcesPage } from '@/pages/ResourcesPage';
 import { PartnersPage } from '@/pages/PartnersPage';
@@ -22,6 +23,7 @@ export function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:slug" element={<EventDetailPage />} />
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/team/:id" element={<MemberDetailPage />} />
           <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/partners" element={<PartnersPage />} />
